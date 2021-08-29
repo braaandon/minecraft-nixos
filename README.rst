@@ -7,6 +7,12 @@ NixOS MCPELauncher
 
 MCPELauncher-client wrapped in a Nix flake
 
+----
+Demo
+----
+
+.. image:: demo.gif
+
 --------
 Building
 --------
