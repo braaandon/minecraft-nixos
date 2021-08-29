@@ -12,9 +12,8 @@
         pkgs = nixpkgs.legacyPackages.${system}; 
         arch = nixpkgs.lib.removeSuffix "-linux" "${system}";
       in rec {
-        
         defaultPackage = with pkgs; appimageTools.wrapType2 {
-          name = "mcpe-launcher";
+          name = "mcpelauncher-client";
 
           src = fetchurl {
             url = "https://github.com/ChristopherHX/linux-packaging-scripts/releases/download/v0.2.5-672/Minecraft_Bedrock_Launcher-${arch}-0.0.672.AppImage";
