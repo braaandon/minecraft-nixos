@@ -47,7 +47,7 @@ This uses flake-compat, thanks edolstra for their work.
 Installing (Local) NEW
 ----------------------
 
-If you would like to install it locally it will require you to add support for *floating content-addressed derivations* like so:
+Make sure your system has support for flakes & ca-references:
 
 .. code:: nix
 
@@ -56,7 +56,7 @@ If you would like to install it locally it will require you to add support for *
       package = pkgs.nixUnstable;
 
       extraOptions = ''
-        experimental-features = nix-command flakes ca-derivations ca-references
+        experimental-features = nix-command flakes ca-references
       '';
     };
   }
