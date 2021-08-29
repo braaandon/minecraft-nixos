@@ -39,6 +39,14 @@ in the nix store which you can run to start the launcher.
 Installing (Local)
 ------------------
 
+For those who would rather not break nix-env, run :bash:`nix-env -if .`
+
+This uses flake-compat, thanks edolstra for their work.
+
+----------------------
+Installing (Local) NEW
+----------------------
+
 If you would like to install it locally it will require you to add support for *floating content-addressed derivations* like so:
 
 .. code:: nix
