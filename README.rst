@@ -53,7 +53,7 @@ If you would like to install it locally it will require you to add support for *
     };
   }
 
-then run :bash:`nix profile install` in whatever directory you cloned it to.
+then run :bash:`nix profile install /path/to/flake.nix`
 
 -------------------
 Installing (Global)
