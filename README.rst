@@ -13,67 +13,33 @@ Demo
 
 .. image:: demo.gif
 
---------
-Building
---------
+-------------
+Local Install
+-------------
 
-Make sure your system has flake support:
+Run :bash:`git clone https://github.com/staccato/mcpe-nixos` then :bash:`nix-env -if .` in the repository directory
 
+--------------
+System Install
+--------------
 
-.. code:: nix
-
-  {
-    nix = {
-      package = pkgs.nixUnstable;
-
-      extraOptions = ''
-        experimental-features = nix-command flakes
-      '';
-    };
-  }
-  
-Then clone the repository and run :bash:`nix build`, once complete you should have a result folder which symlinks to a script 
-in the nix store which you can run to start the launcher.
-
-------------------
-Installing (Local)
-------------------
-
-For those who would rather not break nix-env, run :bash:`nix-env -if .`
-
-This uses flake-compat, thanks edolstra for their work.
-
-----------------------
-Installing (Local) NEW
-----------------------
-
-Make sure your system has support for flakes & ca-references:
+Add this to your flake.nix
 
 .. code:: nix
 
   {
-    nix = {
-      package = pkgs.nixUnstable;
-
-      extraOptions = ''
-        experimental-features = nix-command flakes ca-references
-      '';
-    };
+    inputs.mcpe-nixos.url = "github:staccato/mcpe-nixos";
   }
 
-then run :bash:`nix profile install /path/to/flake.nix`
-
--------------------
-Installing (Global)
--------------------
-
-If you would like to install it globally, add the following to your system configuration:
+Add this to your NixOS configuration.nix
 
 .. code:: nix
+
+  { inputs, ... }
 
   {
     environment.systemPackages = {
-      <flake>.defaultPackage.<arch>
+      inputs.mcpe-linux.defaultPackage.<platform>
     };
   }
 
