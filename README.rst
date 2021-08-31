@@ -40,7 +40,7 @@ Add this to your NixOS configuration.nix
 
 .. code:: nix
 
-  { inputs, ... }
+  { inputs, ... }:
 
   {
     environment.systemPackages = {
