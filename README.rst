@@ -7,6 +7,11 @@ NixOS MCPELauncher
 
 MCPELauncher-client wrapped in a Nix flake
 
+There are two branches
+
+* master - Latest release of MCPELauncher-client
+* hooking - MCPELauncher-client with hooking functionality (unstable)
+
 ----
 Demo
 ----
