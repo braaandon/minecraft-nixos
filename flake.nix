@@ -22,7 +22,7 @@
           name = "mcpelauncher-client";
 
           src = fetchurl {
-            url = "https://github.com/ChristopherHX/linux-packaging-scripts/releases/download/v0.2.0-hooking4-665/Minecraft_Bedrock_Launcher-${arch}-0.0.665.AppImage";
+            url = "https://github.com/ChristopherHX/linux-packaging-scripts/releases/download/v0.2.1-hook-2-663/Minecraft_Bedrock_Launcher-${arch}-0.0.663.AppImage";
             sha256 = "sha256-9TkGMm8BjKpJJ9s5/oT4KT7WtU3ypkVr9QIsQnQMDe4=";
           };
         };
